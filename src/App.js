@@ -6,9 +6,9 @@ import Header from './components/Header/Header';
 function App() {
   return (
       <BrowserRouter>
+        <Header />
         <Switch>
-          {/* <Route path="/" component={Home}/> */}
-          <Route path="/" component={Header}/>
+          <Route path="/" component={Home}/>
         </Switch>
       </BrowserRouter>
   );
