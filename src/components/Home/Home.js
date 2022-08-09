@@ -1,9 +1,6 @@
 import React from 'react';
 import './Home.scss';
 import Menu from '../../assets/images/hamburger-icon.png';
-import Summer from '../../assets/images/summer.png';
-import Gaming from '../../assets/images/gaming.jpg';
-import Computers from '../../assets/images/computers.jpeg';
 import Prime from '../../assets/images/prime-ad.jpeg';
 
 function Home() {
@@ -49,6 +46,28 @@ function Home() {
           </div>
         </div>
       </section>
+      <div className="home__categories home__categories--secondary">
+          <div className="home__category">
+            <h4 className="home__category__heading">Gaming Accessories</h4>
+            <div className="home__category__image home__category__image__furniture"></div>
+            <p className="home__category__learn-more">Learn More</p>
+          </div>
+          <div className="home__category">
+            <h4 className="home__category__heading">Computers & Accessories</h4>
+            <div className="home__category__image home__category__image__sports"></div>
+            <p className="home__category__learn-more">Learn More</p>
+          </div>
+          <div className="home__category">
+            <h4 className="home__category__heading">Summer Deals</h4>
+            <div className="home__category__image home__category__image__kitchen"></div>
+            <p className="home__category__learn-more">Learn More</p>
+          </div>
+          <div className="home__category home__category--last">
+            <h4 className="home__category__heading">Summer Deals</h4>
+            <div className="home__category__image home__category__image__school"></div>
+            <p className="home__category__learn-more">Learn More</p>
+          </div>
+        </div>
     </main>
   )
 }
