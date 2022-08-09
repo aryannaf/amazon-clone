@@ -1,0 +1,171 @@
+@use '../../styling/global.scss';
+@use '../../styling/partials/colors' as *;
+
+.home {
+    background-color: $primary-background;
+
+    &__nav {
+        padding: 1rem;
+        background-color: $secondary-background;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__menu-icon {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+
+        &__heading {
+            font-size: .88rem;
+
+            &--bold {
+                font-size: .88rem;
+                font-weight: 700;
+            }
+
+            &--mobile-hidden {
+                display: none;
+            }
+        }
+
+        &__featured {
+            display: none;
+
+            &--bold {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__hero {
+        height: auto;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,
+        rgb(204, 204, 204)), url('../../assets/images/home-hero.jpeg');
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            padding: 0 1rem;
+        }
+    }
+
+    &__title-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title-wrapper {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        background-color: #bc7c0caa;
+    }
+
+    &__categories {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 1rem;
+
+        &--secondary {
+            padding-top: .75rem;
+            background-color: rgb(204, 204, 204);
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__category {
+        background-color: $primary-text;
+        padding: 1rem;
+        margin-right: 1rem;
+        height: fit-content;
+
+        &--last {
+            margin-right: 0;
+        }
+
+        &__heading {
+            color: $secondary-text;
+            margin-bottom: .5rem;
+        }
+
+        &__image {
+            width: 14rem;
+            height: 18.75rem;
+            display: flex;
+            scroll-snap-align: center;
+
+            &__gaming {
+                background: url('../../assets/images/gaming.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__computers {
+                background: url('../../assets/images/computers.jpeg') no-repeat;
+                background-size: cover;
+            }
+
+            &__summer {
+                background: url('../../assets/images/summer.png') no-repeat;
+                background-size: cover;
+            }
+
+            &__furniture {
+                background: url('../../assets/images/furniture.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__sports {
+                background: url('../../assets/images/sports.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__kitchen {
+                background: url('../../assets/images/kitchen.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__school {
+                background: url('../../assets/images/school.jpg') no-repeat;
+                background-size: cover;
+            }
+        }
+
+        &__learn-more {
+            color: royalblue;
+            font-size: .8rem;
+            margin-top: .75rem;
+        }
+    }
+
+    &__extra {
+
+        &__account {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            background-color: $primary-text;
+            margin-bottom: 1rem;
+
+            &__heading {
+                color: $secondary-text;
+                margin-bottom: 1rem;
+            }
+
+            &__sign-in {
+                background-color: $primary-highlight;
+                border: none;
+                font-weight: 700;
+            }
+        }
+
+        &__prime {
+            width: 18rem;
+            height: 18rem;
+            scroll-snap-align: center;
+        }
+    }
+}
