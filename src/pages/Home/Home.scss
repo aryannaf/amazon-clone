@@ -41,7 +41,8 @@
     &__hero {
         height: auto;
         background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,
-        rgb(204, 204, 204)), url('../../assets/images/home-hero.jpeg');
+        rgb(204, 204, 204)), url('../../assets/images/home-hero.jpeg') repeat-y;
+        background-size: contain;
         display: flex;
         flex-direction: column;
 
