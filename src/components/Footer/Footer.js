@@ -2,7 +2,6 @@ import React from 'react';
 import './Footer.scss';
 import Up from '../../assets/images/up-arrow.png';
 import Logo from '../../assets/images/everest.png';
-import Home from '../../pages/Home/Home';
 import { NavLink } from 'react-router-dom';
 
 function Footer() {
@@ -71,7 +70,7 @@ function Footer() {
                 </div>
             </section>
             <div className="footer__logo-container">
-                <NavLink to={Home} className="footer__logo-link">
+                <NavLink to='/' className="footer__logo-link">
                     <img className="footer__logo" src={Logo} alt="everest logo" />
                 </NavLink>
             </div>

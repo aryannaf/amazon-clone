@@ -1,5 +1,6 @@
 @use '../../styling/global.scss';
 @use '../../styling/partials/colors' as *;
+@use '../../styling/partials/mixins' as *;
 
 .footer {
 
@@ -9,6 +10,10 @@
         flex-direction: column;
         align-items: center;
         padding: .5rem;
+
+        @include tablet {
+            padding: .75rem;
+        }
 
         &:hover {
             background-color: $tertiary-hover;
@@ -32,20 +37,49 @@
             justify-content: space-between;
             padding: 1rem;
             padding-bottom: 0;
+
+            @include mini-tablet {
+                padding: 1.25rem;
+                padding-bottom: .25rem;
+                justify-content: space-around;
+            }
+
+            @include tablet {
+                display: none;
+            }
         }
 
         &--desktop {
             display: none;
+
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+                background-color: $secondary-background;
+                padding: 3rem;
+            }
         }
 
         &__section {
+            @include tablet {
+                width: 20%;
+            }
+        }
 
+        &__heading {
+            @include tablet {
+                margin-bottom: 1rem;
+            }
         }
     }
 
     &__link {
         font-size: .8rem;
         margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: .75rem;
+        }
 
         &:hover {
             text-decoration: underline;
@@ -71,6 +105,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+        }
+
+        @include tablet {
+            padding: 1.5rem 3rem 2rem 3rem;
+        }
 
         &--mobile {
             background-color: $primary-background;
@@ -101,14 +143,26 @@
         width: 100%;
         justify-content: center;
 
+        @include tablet {
+            flex-wrap: nowrap;
+        }
+
         &__link-container {
             width: 100%;
             display: flex;
             justify-content: space-between;
+
+            @include tablet {
+                width: fit-content;
+            }
         }
 
         &__link {
             font-size: .65rem;
+
+            @include tablet {
+                margin-right: 1.5rem;
+            }
 
             &:hover {
                 text-decoration: underline;
@@ -121,6 +175,12 @@
             text-align: center;
             margin-top: .5rem;
 
+            @include tablet {
+                margin: 0;
+                text-align: left;
+                width: fit-content;
+            }
+
             &:hover {
                 text-decoration: none;
                 cursor: auto;
@@ -132,6 +192,10 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            margin-top: 3rem;
+        }
 
         &__notes {
             font-size: .75rem;
