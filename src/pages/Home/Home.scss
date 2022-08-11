@@ -73,7 +73,7 @@
 
         &--secondary {
             padding-top: .75rem;
-            background-color: rgb(204, 204, 204);
+            background-color: $light-background;
             padding-bottom: 1rem;
         }
     }
@@ -98,6 +98,11 @@
             height: 18.75rem;
             display: flex;
             scroll-snap-align: center;
+
+            &--full {
+                width: 100%;
+                height: 18.75rem;
+            }
 
             &__gaming {
                 background: url('../../assets/images/gaming.jpg') no-repeat;
@@ -133,12 +138,71 @@
                 background: url('../../assets/images/school.jpg') no-repeat;
                 background-size: cover;
             }
+
+            &__music {
+                background: url('../../assets/images/newmusic.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__movie {
+                background: url('../../assets/images/goldmovie.jpg') no-repeat center;
+                background-size: cover;
+            }
+            &__games {
+                background: url('../../assets/images/videogames.jpeg') no-repeat;
+                background-size: cover;
+            }
         }
 
         &__learn-more {
-            color: royalblue;
+            color: $link;
             font-size: .8rem;
             margin-top: .75rem;
+        }
+
+        &__cluster {
+
+            &-items {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            &-item {
+                width: 7.5rem;
+                // height: 7.5rem;
+            }
+
+            &-image {
+                width: 100%;
+                height: 7.5rem;
+
+                &--dji {
+                    background: url('../../assets/images/djimini.jpg') no-repeat center;
+                    background-size: cover;
+                }
+
+                &--psstore {
+                    background: url('../../assets/images/psstore.jpg') no-repeat center;
+                    background-size: cover;
+                }
+
+                &--fujifilm {
+                    background: url('../../assets/images/fujifilm.jpg') no-repeat center;
+                    background-size: cover;
+                }
+
+                &--djirs {
+                    background: url('../../assets/images/djirs.jpg') no-repeat center;
+                    background-size: cover;
+                }
+            }
+
+            &-description {
+                color: $secondary-text;
+                font-size: .8rem;
+                margin-bottom: .5rem;
+            }
         }
     }
 
@@ -168,5 +232,111 @@
             height: 18rem;
             scroll-snap-align: center;
         }
+    }
+
+    &__banner {
+        background-color: $light-background;
+        padding: 1rem;
+        padding-top: 0;
+    }
+
+    &__poster {
+        width: 100%;
+    }
+
+    &__movies {
+        background-color: $light-background;
+        padding: 1rem;
+        padding-top: 0;
+
+        &-wrapper {
+            padding: 1.25rem 1rem;
+            background-color: $primary-text;
+        }
+
+        &__heading {
+            display: flex;
+            align-items: center;
+        }
+
+        &__title {
+            color: $secondary-text;
+        }
+
+        &__see-more {
+            color: $link;
+            font-size: .8rem;
+            margin-left: 1rem;
+        }
+
+        &__carousel {
+            margin-top: .5rem;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+    }
+
+    &__movie {
+        scroll-snap-align: center;
+        margin-right: .5rem;
+    }
+
+    &__tertiary-categories {
+        background-color: $light-background;
+        padding: 1rem;
+        padding-top: 0;
+
+        &__category {
+            background-color: $primary-text;
+            margin-top: 1rem;
+            padding: 1rem;
+
+            &--cluster {
+                background-color: $primary-text;
+                padding: 1rem;
+            }
+        }
+    }
+
+    &__bottom-category {
+
+        &__container {
+            background-color: $light-background;
+            padding: 1rem;
+            padding-top: 0;
+        }
+
+        &__ad-container {
+            margin-top: 1rem;
+        }
+
+        &__ad {
+            width: 100%;
+        }
+    }
+
+    &__games-category {
+        background-color: $primary-text;
+        padding: 1.25rem 1rem;
+
+        &__title {
+            color: $secondary-text;
+        }
+    }
+
+    &__games {
+
+        &__carousel {
+            margin-top: .75rem;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+    }
+
+    &__game {
+        scroll-snap-align: center;
+        margin-right: .5rem;
     }
 }
