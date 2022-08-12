@@ -32,7 +32,7 @@ import MarioParty from '../../assets/images/marioparty.jpg';
 import Minecraft from '../../assets/images/minecraft.jpg';
 import AnimalCrossing from '../../assets/images/animalcrossing.jpg';
 import Xbox2 from '../../assets/images/xbox2.jpg';
-import GiftCard from '../../assets/images/giftcard.jpeg';
+import Info from '../../assets/images/info-16.png';
 
 
 function Home() {
@@ -172,23 +172,27 @@ function Home() {
         <div className="home__games-category">
           <h4 className="home__games-category__title">Most wished for in Video Games</h4>
           <div className="home__games__carousel">
-            <img className="home__game" src={XBox} alt="xbox"/>
-            <img className="home__game" src={VR} alt="vr headset"/>
-            <img className="home__game" src={Xenoble} alt="xenoblade 3"/>
-            <img className="home__game" src={NintendoSwitch} alt="nintendo switch"/>
-            <img className="home__game" src={Hogwarts} alt="hogwarts"/>
-            <img className="home__game" src={Mariokart} alt="mario kart"/>
-            <img className="home__game" src={SwitchSports} alt="nintendo switch sports"/>
-            <img className="home__game" src={Pokemon} alt="pokemon"/>
-            <img className="home__game" src={Zelda} alt="zelda"/>
-            <img className="home__game" src={MarioParty} alt="mario party"/>
-            <img className="home__game" src={Minecraft} alt="minecraft"/>
-            <img className="home__game" src={AnimalCrossing} alt="animal crossing"/>
-            <img className="home__game" src={Xbox2} alt="xbox"/>
+            <img className="home__game" src={XBox} alt="xbox" />
+            <img className="home__game" src={VR} alt="vr headset" />
+            <img className="home__game" src={Xenoble} alt="xenoblade 3" />
+            <img className="home__game" src={NintendoSwitch} alt="nintendo switch" />
+            <img className="home__game" src={Hogwarts} alt="hogwarts" />
+            <img className="home__game" src={Mariokart} alt="mario kart" />
+            <img className="home__game" src={SwitchSports} alt="nintendo switch sports" />
+            <img className="home__game" src={Pokemon} alt="pokemon" />
+            <img className="home__game" src={Zelda} alt="zelda" />
+            <img className="home__game" src={MarioParty} alt="mario party" />
+            <img className="home__game" src={Minecraft} alt="minecraft" />
+            <img className="home__game" src={AnimalCrossing} alt="animal crossing" />
+            <img className="home__game" src={Xbox2} alt="xbox" />
           </div>
         </div>
         <div className="home__bottom-category__ad-container">
-          <img className="home__bottom-category__ad" src={GiftCard} alt="gift card ad"/>
+          <div className="home__bottom-category__ad"></div>
+          <div className="home__bottom-category__sponsored-container">
+            <p className="home__bottom-category__sponsored">Sponsored</p>
+            <img className="home__bottom-category__sponsored-icon" src={Info} alt="information"/>
+          </div>
         </div>
       </section>
     </main>

@@ -16,6 +16,10 @@
             padding: 1.25rem;
         }
 
+        @include tablet {
+            padding: 1.25rem 3rem;
+        }
+
         &__menu-icon {
             width: 1.4rem;
             height: 1.4rem;
@@ -77,6 +81,11 @@
             margin-top: 5rem;
             margin-bottom: 5rem;
         }
+
+        @include tablet {
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+        }
     }
 
     &__categories {
@@ -85,10 +94,22 @@
         scroll-snap-type: x mandatory;
         padding: 0 1rem;
 
+        @include mini-tablet {
+            padding: 0 1.25rem;
+        }
+
+        @include tablet {
+            padding: 0 3rem 1.25rem 3rem;
+        }
+
         &--secondary {
             padding-top: .75rem;
             background-color: $light-background;
             padding-bottom: 1rem;
+        }
+
+        @include tablet {
+            padding-top: 0;
         }
     }
 
@@ -156,15 +177,30 @@
             &__music {
                 background: url('../../assets/images/newmusic.jpg') no-repeat;
                 background-size: cover;
+
+                @include mini-tablet {
+                    background: url('../../assets/images/newmusic.jpg') no-repeat center;
+                    background-size: cover;
+                }
             }
 
             &__movie {
                 background: url('../../assets/images/goldmovie.jpg') no-repeat center;
                 background-size: cover;
+
+                @include mini-tablet {
+                    background: url('../../assets/images/goldmovie.jpg') no-repeat;
+                    background-size: cover;
+                }
             }
             &__games {
                 background: url('../../assets/images/videogames.jpeg') no-repeat;
                 background-size: cover;
+
+                @include mini-tablet {
+                    background: url('../../assets/images/videogames.jpeg') no-repeat center;
+                    background-size: cover;
+                }
             }
         }
 
@@ -193,6 +229,10 @@
 
                 @include mini-tablet {
                     height: 12rem;
+                }
+
+                @include tablet {
+                    height: 7rem;
                 }
 
                 &--dji {
@@ -256,6 +296,15 @@
         background-color: $light-background;
         padding: 1rem;
         padding-top: 0;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+            padding-top: .25rem;
+        }
+
+        @include tablet {
+            padding: .5rem 3rem 1.25rem 3rem;
+        }
     }
 
     &__poster {
@@ -266,6 +315,15 @@
         background-color: $light-background;
         padding: 1rem;
         padding-top: 0;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+            padding-top: 0;
+        }
+
+        @include tablet {
+            padding: 0 3rem 1.25rem 3rem;
+        }
 
         &-wrapper {
             padding: 1.25rem 1rem;
@@ -305,14 +363,37 @@
         padding: 1rem;
         padding-top: 0;
 
+        @include mini-tablet {
+            padding: 1.25rem;
+            padding-top: .25rem;
+        }
+        
+        @include tablet {
+            padding: 0 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
         &__category {
             background-color: $primary-text;
             margin-top: 1rem;
             padding: 1rem;
 
+            @include tablet {
+                width: 44%;
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+            }
+
             &--cluster {
                 background-color: $primary-text;
                 padding: 1rem;
+
+                @include tablet {
+                    width: 44%;
+                    margin-bottom: 1.25rem;
+                }
             }
         }
     }
@@ -324,22 +405,38 @@
             padding: 1rem;
             padding-top: 0;
 
+            @include mini-tablet {
+                padding: 1.25rem;
+                padding-top: .25rem;
+            }
+
             @include tablet {
                 display: flex;
-                
+                justify-content: space-between;
+                padding: .5rem 3rem 1.5rem 3rem;
             }
         }
 
         &__ad-container {
+            width: 100%;
+            height: 100%;
             margin-top: 1rem;
+            display: flex;
+            justify-content: center;
 
             @include tablet {
-                width: 50%;
+                width: 37%;
+                margin-top: 0;
+                flex-direction: column;
+                
             }
         }
 
         &__ad {
             width: 100%;
+            height: 15rem;
+            background: url('../../assets/images/giftcard.jpeg') no-repeat;
+            background-size: cover;
 
             @include mini-tablet {
                 display: none;
@@ -347,6 +444,30 @@
 
             @include tablet {
                 display: initial;
+                background: url('../../assets/images/giftcard.jpeg') no-repeat center;
+                background-size: cover;
+                
+            }
+        }
+
+        &__sponsored-container {
+            display: none;
+
+            @include tablet {
+                display: flex;
+                margin-top: .75rem;
+                justify-content: flex-end;
+            }
+        }
+
+        &__sponsored {
+            font-size: .65rem;
+            color: $secondary-text;
+            margin-right: .25rem;
+
+            &-icon {
+                width: .75rem;
+                height: .75rem;
             }
         }
     }
@@ -356,7 +477,7 @@
         padding: 1.25rem 1rem;
 
         @include tablet {
-            width: 44%;
+            width: 56%;
         }
 
         &__title {
