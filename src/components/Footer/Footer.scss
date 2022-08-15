@@ -1,5 +1,6 @@
 @use '../../styling/global.scss';
 @use '../../styling/partials/colors' as *;
+@use '../../styling/partials/mixins' as *;
 
 .footer {
 
@@ -9,6 +10,10 @@
         flex-direction: column;
         align-items: center;
         padding: .5rem;
+
+        @include tablet {
+            padding: .75rem;
+        }
 
         &:hover {
             background-color: $tertiary-hover;
@@ -32,14 +37,56 @@
             justify-content: space-between;
             padding: 1rem;
             padding-bottom: 0;
+
+            @include mini-tablet {
+                padding: 1.25rem;
+                padding-bottom: .25rem;
+                justify-content: space-around;
+            }
+
+            @include tablet {
+                display: none;
+            }
         }
 
         &--desktop {
             display: none;
+
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+                background-color: $secondary-background;
+                padding: 3rem;
+            }
+
+            @include laptop {
+                padding: 3rem 4rem 2rem 4rem;
+            }
+
+            @include desktop {
+                padding: 3rem 10rem 2rem 10rem;
+            }
+
+            @include wide-desktop {
+                padding-left: 15vw;
+                padding-right: 15vw;
+            }
         }
 
         &__section {
+            @include tablet {
+                width: 20%;
+            }
 
+            @include laptop {
+                width: fit-content;
+            }
+        }
+
+        &__heading {
+            @include tablet {
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -47,9 +94,31 @@
         font-size: .8rem;
         margin-bottom: 1rem;
 
+        @include tablet {
+            font-size: .75rem;
+        }
+
         &:hover {
             text-decoration: underline;
             cursor: pointer;
+        }
+
+        &__item {
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        &__heading {
+            font-size: .75rem;
+            font-weight: 700;
+        }
+
+        &__description {
+            font-size: .75rem;
+            width: 7rem;
+            margin-bottom: 1rem;
         }
     }
 
@@ -58,6 +127,11 @@
         display: flex;
         justify-content: center;
         padding: 2rem 1rem;
+
+        @include laptop {
+            background-color: $secondary-background;
+            border-top: 1px solid $tertiary-background;
+        }
     }
 
     &__logo {
@@ -72,16 +146,44 @@
         align-items: center;
         justify-content: center;
 
+        @include mini-tablet {
+            padding: 1.25rem;
+        }
+
+        @include tablet {
+            padding: 1.5rem 3rem 2rem 3rem;
+        }
+
         &--mobile {
             background-color: $primary-background;
             display: flex;
             justify-content: center;
             padding: 1rem;
             padding-top: 0;
+
+            @include laptop {
+                display: none;
+            }
         }
 
         &--desktop {
             display: none;
+
+            @include laptop {
+                display: flex;
+                background-color: $primary-background;
+                padding: 3rem 4rem 0 4rem;
+                justify-content: space-between;
+            }
+
+            @include desktop {
+                padding: 3rem 10rem 0 10rem;
+            }
+
+            @include wide-desktop {
+                padding-left: 15vw;
+                padding-right: 15vw;
+            }
         }
     }
 
@@ -101,14 +203,26 @@
         width: 100%;
         justify-content: center;
 
+        @include tablet {
+            flex-wrap: nowrap;
+        }
+
         &__link-container {
             width: 100%;
             display: flex;
             justify-content: space-between;
+
+            @include mini-tablet {
+                width: fit-content;
+            }
         }
 
         &__link {
             font-size: .65rem;
+
+            @include mini-tablet {
+                margin-right: 1.5rem;
+            }
 
             &:hover {
                 text-decoration: underline;
@@ -121,6 +235,12 @@
             text-align: center;
             margin-top: .5rem;
 
+            @include tablet {
+                margin: 0;
+                text-align: left;
+                width: fit-content;
+            }
+
             &:hover {
                 text-decoration: none;
                 cursor: auto;
@@ -132,6 +252,10 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            margin-top: 3rem;
+        }
 
         &__notes {
             font-size: .75rem;

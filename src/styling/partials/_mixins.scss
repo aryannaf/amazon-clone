@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+@mixin mini-tablet {
+    @media (min-width: $mini-tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: $laptop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin wide-desktop {
+    @media (min-width: $wide-desktop-breakpoint) {
+        @content;
+    }
+}

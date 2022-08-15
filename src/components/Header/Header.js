@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/everest.png';
 import Search from '../../assets/images/searchicon.png';
 import ShoppingBag from '../../assets/images/shoppingbag.png';
@@ -8,7 +9,9 @@ function Header() {
     return (
         <header className="header">
             <nav className="header__nav">
-                <img className="header__logo" src={Logo} alt="everest logo" />
+                <NavLink to="/" className="header__logo-link">
+                    <img className="header__logo" src={Logo} alt="everest logo" />
+                </NavLink>
                 <div className="header__search">
                     <input className="header__search-bar" type="text" />
                     <div className="header__search-icon-container">
