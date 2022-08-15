@@ -58,11 +58,28 @@
                 background-color: $secondary-background;
                 padding: 3rem;
             }
+
+            @include laptop {
+                padding: 3rem 4rem 2rem 4rem;
+            }
+
+            @include desktop {
+                padding: 3rem 10rem 2rem 10rem;
+            }
+
+            @include wide-desktop {
+                padding-left: 15vw;
+                padding-right: 15vw;
+            }
         }
 
         &__section {
             @include tablet {
                 width: 20%;
+            }
+
+            @include laptop {
+                width: fit-content;
             }
         }
 
@@ -85,6 +102,24 @@
             text-decoration: underline;
             cursor: pointer;
         }
+
+        &__item {
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        &__heading {
+            font-size: .75rem;
+            font-weight: 700;
+        }
+
+        &__description {
+            font-size: .75rem;
+            width: 7rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__logo-container {
@@ -92,6 +127,11 @@
         display: flex;
         justify-content: center;
         padding: 2rem 1rem;
+
+        @include laptop {
+            background-color: $secondary-background;
+            border-top: 1px solid $tertiary-background;
+        }
     }
 
     &__logo {
@@ -120,10 +160,30 @@
             justify-content: center;
             padding: 1rem;
             padding-top: 0;
+
+            @include laptop {
+                display: none;
+            }
         }
 
         &--desktop {
             display: none;
+
+            @include laptop {
+                display: flex;
+                background-color: $primary-background;
+                padding: 3rem 4rem 0 4rem;
+                justify-content: space-between;
+            }
+
+            @include desktop {
+                padding: 3rem 10rem 0 10rem;
+            }
+
+            @include wide-desktop {
+                padding-left: 15vw;
+                padding-right: 15vw;
+            }
         }
     }
 
@@ -152,7 +212,7 @@
             display: flex;
             justify-content: space-between;
 
-            @include tablet {
+            @include mini-tablet {
                 width: fit-content;
             }
         }
@@ -160,7 +220,7 @@
         &__link {
             font-size: .65rem;
 
-            @include tablet {
+            @include mini-tablet {
                 margin-right: 1.5rem;
             }
 
