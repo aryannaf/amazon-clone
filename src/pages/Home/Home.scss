@@ -1,0 +1,703 @@
+@use '../../styling/global.scss';
+@use '../../styling/partials/colors' as *;
+@use '../../styling/partials/mixins' as *;
+
+.home {
+    background-color: $light-background;
+
+    &__wrapper {
+        @include wide-desktop {
+            margin: auto;
+            width: 81.81rem;
+        }
+    }
+
+    &__nav {
+        padding: 1rem;
+        background-color: $secondary-background;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+        }
+
+        @include tablet {
+            padding: 1.25rem 3rem;
+        }
+
+        @include laptop {
+            padding: 1rem 4rem;
+        }
+
+        &__menu-icon {
+            width: 1.4rem;
+            height: 1.4rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__heading {
+            font-size: .88rem;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            &--bold {
+                font-size: .88rem;
+                font-weight: 700;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            &--mobile-hidden {
+                display: none;
+
+                @include mini-tablet {
+                    display: flex;
+                }
+            }
+        }
+
+        &__featured {
+            display: none;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            @include laptop {
+                display: flex;
+            }
+
+            @include desktop {
+                flex-grow: .5;
+                justify-content: flex-end;
+            }
+
+            &--bold {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__hero {
+        height: auto;
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,
+        rgb(204, 204, 204)), url('../../assets/images/home-hero.jpeg') repeat-y;
+        background-size: contain;
+        display: flex;
+        flex-direction: column;
+
+        @include laptop {
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 10%,
+            rgb(204, 204, 204)), url('../../assets/images/home-hero.jpeg');
+            background-size: cover;
+        }
+
+        &-title {
+            padding: 0 1rem;
+
+            @include laptop {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__title-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title-wrapper {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        background-color: #bc7c0caa;
+
+        @include mini-tablet {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        @include tablet {
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+        }
+
+        @include laptop {
+            height: 4rem;
+            margin-top: 6.5rem;
+            margin-bottom: 6.5rem;
+        }
+    }
+
+    &__categories {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 1rem;
+
+        @include mini-tablet {
+            padding: 0 1.25rem;
+        }
+
+        @include tablet {
+            padding: 0 3rem 1.25rem 3rem;
+        }
+
+        @include laptop {
+            padding: 0 4rem 1.25rem 4rem;
+        }
+
+        @include desktop {
+            scroll-snap-type: none;
+            justify-content: space-between;
+        }
+
+        @include wide-desktop {
+            padding: 0 1rem 1.25rem 1rem;
+        }
+
+        &--secondary {
+            padding-top: .75rem;
+            background-color: $light-background;
+            padding-bottom: 1rem;
+        }
+
+        @include tablet {
+            padding-top: 0;
+        }
+    }
+
+    &__category {
+        background-color: $primary-text;
+        padding: 1rem;
+        margin-right: 1rem;
+        height: fit-content;
+
+        @include desktop {
+            margin-right: 0;
+            width: 21%;
+        }
+
+        &--last {
+            margin-right: 0;
+        }
+
+        &__heading {
+            color: $secondary-text;
+            margin-bottom: .5rem;
+        }
+
+        &__image {
+            width: 14rem;
+            height: 18.75rem;
+            display: flex;
+            scroll-snap-align: center;
+
+            @include desktop {
+                width: 100%;
+            }
+
+            &--full {
+                width: 100%;
+                height: 18.75rem;
+            }
+
+            &__gaming {
+                background: url('../../assets/images/gaming.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__computers {
+                background: url('../../assets/images/computers.jpeg') no-repeat;
+                background-size: cover;
+            }
+
+            &__summer {
+                background: url('../../assets/images/summer.png') no-repeat;
+                background-size: cover;
+            }
+
+            &__furniture {
+                background: url('../../assets/images/furniture.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__sports {
+                background: url('../../assets/images/sports.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__kitchen {
+                background: url('../../assets/images/kitchen.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__school {
+                background: url('../../assets/images/school.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            &__music {
+                background: url('../../assets/images/newmusic.jpg') no-repeat;
+                background-size: cover;
+
+                @include mini-tablet {
+                    background: url('../../assets/images/newmusic.jpg') no-repeat center;
+                    background-size: cover;
+                }
+            }
+
+            &__movie {
+                background: url('../../assets/images/goldmovie.jpg') no-repeat center;
+                background-size: cover;
+
+                @include tablet {
+                    background: url('../../assets/images/goldmovie.jpg') no-repeat;
+                    background-size: cover;
+                }
+            }
+            &__games {
+                background: url('../../assets/images/videogames.jpeg') no-repeat;
+                background-size: cover;
+
+                @include mini-tablet {
+                    background: url('../../assets/images/videogames.jpeg') no-repeat center;
+                    background-size: cover;
+                }
+            }
+        }
+
+        &__learn-more {
+            color: $link;
+            font-size: .8rem;
+            margin-top: .75rem;
+            width: fit-content;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        &__cluster {
+
+            &-items {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            &-item {
+                width: 48%;
+                height: 100%;
+            }
+
+            &-image {
+                width: 100%;
+                height: 7.5rem;
+
+                @include mini-tablet {
+                    height: 6rem;
+                }
+
+                @include tablet {
+                    height: 7rem;
+                }
+                
+                @include laptop {
+                    height: 7.8rem;
+                }
+
+                @include desktop {
+                    height: 6.5rem;
+                }
+
+                &--dji {
+                    background: url('../../assets/images/djimini.jpg') no-repeat center;
+                    background-size: cover;
+                }
+
+                &--psstore {
+                    background: url('../../assets/images/psstore.jpg') no-repeat center;
+                    background-size: cover;
+                }
+
+                &--fujifilm {
+                    background: url('../../assets/images/fujifilm.jpg') no-repeat center;
+                    background-size: cover;
+                }
+
+                &--djirs {
+                    background: url('../../assets/images/djirs.jpg') no-repeat center;
+                    background-size: cover;
+                }
+            }
+
+            &-description {
+                color: $secondary-text;
+                font-size: .8rem;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    &__extra {
+        min-width: 16rem;
+        max-width: 16rem;
+
+        @include desktop {
+            max-width: 23.75%;
+        }
+
+        @include wide-desktop {
+            max-width: 23.5%;
+        }
+
+        &__account {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            background-color: $primary-text;
+            margin-bottom: 1rem;
+
+            &__heading {
+                color: $secondary-text;
+                margin-bottom: 1rem;
+            }
+
+            &__sign-in {
+                background-color: $primary-highlight;
+                border: none;
+                font-weight: 700;
+
+                &:hover {
+                    background-color: $primary-highlight-contrast;
+                    cursor: pointer;
+                }
+
+                @include desktop {
+                    padding: .4rem 0;
+                }
+            }
+        }
+
+        &__prime {
+            width: 100%;
+            height: 16.7rem;
+            scroll-snap-align: center;
+
+            @include desktop {
+                width: 100%;
+                height: 16rem;
+            }
+
+            @include wide-desktop {
+                height: 17.1rem;
+            }
+        }
+    }
+
+    &__banner {
+        background-color: $light-background;
+        padding: 1rem;
+        padding-top: 0;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+            padding-top: .25rem;
+        }
+
+        @include tablet {
+            padding: .5rem 3rem 1.25rem 3rem;
+        }
+
+        @include laptop {
+            padding: .5rem 4rem 1.25rem 4rem;
+        }
+    }
+
+    &__poster {
+        width: 100%;
+    }
+
+    &__movies {
+        background-color: $light-background;
+        padding: 1rem;
+        padding-top: 0;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+            padding-top: 0;
+        }
+
+        @include tablet {
+            padding: 0 3rem 1.25rem 3rem;
+        }
+
+        @include laptop {
+            padding: 0 4rem 1.25rem 4rem;
+        }
+
+        @include wide-desktop {
+            padding: 0 1rem 1.25rem 1rem;
+        }
+
+        &-wrapper {
+            padding: 1.25rem 1rem;
+            background-color: $primary-text;
+        }
+
+        &__heading {
+            display: flex;
+            align-items: center;
+        }
+
+        &__title {
+            color: $secondary-text;
+        }
+
+        &__see-more {
+            color: $link;
+            font-size: .8rem;
+            margin-left: 1rem;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        &__carousel {
+            margin-top: .5rem;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+    }
+
+    &__movie {
+        scroll-snap-align: center;
+        margin-right: .5rem;
+    }
+
+    &__tertiary-categories {
+        background-color: $light-background;
+        padding: 1rem;
+        padding-top: 0;
+
+        @include mini-tablet {
+            padding: 1.25rem;
+            padding-top: .25rem;
+            padding-bottom: 0;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        @include tablet {
+            padding: 0 3rem;
+        }
+
+        @include laptop {
+            padding: 0 4rem;
+        }
+
+        @include wide-desktop {
+            padding: 0 1rem;
+        }
+
+        &__category {
+            background-color: $primary-text;
+            margin-top: 1rem;
+            padding: 1rem;
+
+            @include mini-tablet {
+                width: 42%;
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+            }
+
+            @include tablet {
+                width: 44%;
+            }
+
+            @include laptop {
+                width: 45.5%;
+            }
+
+            @include desktop {
+                width: 21%;
+            }
+
+            &--cluster {
+                background-color: $primary-text;
+                padding: 1rem;
+
+                @include mini-tablet {
+                    width: 42%;
+                    margin-bottom: 1.25rem;
+                }
+
+                @include tablet {
+                    width: 44%;
+                }
+
+                @include laptop {
+                    width: 45.5%;
+                }
+
+                @include desktop {
+                    width: 21%;
+                }
+            }
+        }
+    }
+
+    &__bottom-category {
+
+        &__container {
+            background-color: $light-background;
+            padding: 1rem;
+            padding-top: 0;
+
+            @include mini-tablet {
+                padding: 1.25rem;
+                padding-top: .25rem;
+            }
+
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 3rem 1.5rem 3rem;
+            }
+
+            @include laptop {
+                padding: 0 4rem 1.5rem 4rem;
+            }
+
+            @include wide-desktop {
+                padding: 0 1rem 1.5rem 1rem;
+            }
+        }
+
+        &__ad-container {
+            width: 100%;
+            height: 100%;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+
+            @include tablet {
+                width: 37%;
+                margin-top: 0;
+                flex-direction: column;
+            }
+
+            @include laptop {
+                width: 32%;
+            }
+
+            @include desktop {
+                width: 26%;
+            }
+        }
+
+        &__ad {
+            width: 100%;
+            height: 15rem;
+            background: url('../../assets/images/giftcard.jpeg') no-repeat;
+            background-size: cover;
+
+            @include mini-tablet {
+                display: none;
+            }
+
+            @include tablet {
+                display: initial;
+                background: url('../../assets/images/giftcard.jpeg') no-repeat center;
+                background-size: cover;
+            }
+
+            @include laptop {
+                background: url('../../assets/images/giftcard.jpeg') no-repeat;
+                background-size: cover;
+            }
+        }
+
+        &__sponsored-container {
+            display: none;
+
+            @include tablet {
+                display: flex;
+                margin-top: .75rem;
+                justify-content: flex-end;
+            }
+        }
+
+        &__sponsored {
+            font-size: .65rem;
+            color: $secondary-text;
+            margin-right: .25rem;
+
+            &-icon {
+                width: .75rem;
+                height: .75rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &__games-category {
+        background-color: $primary-text;
+        padding: 1.25rem 1rem;
+
+        @include tablet {
+            width: 56%;
+        }
+
+        @include laptop {
+            width: 62%;
+        }
+
+        @include desktop {
+            width: 69.5%;
+        }
+
+        &__title {
+            color: $secondary-text;
+        }
+    }
+
+    &__games {
+
+        &__carousel {
+            margin-top: .75rem;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+    }
+
+    &__game {
+        scroll-snap-align: center;
+        margin-right: .5rem;
+    }
+}

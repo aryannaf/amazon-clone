@@ -1,0 +1,184 @@
+@use '../../styling/global.scss';
+@use '../../styling/partials/colors' as *;
+@use '../../styling/partials/mixins' as *;
+
+* {
+     margin: 0;
+}
+
+.header {
+     background-color: $primary-background;
+     padding: 1rem;
+
+     @include mini-tablet {
+          padding: 1.25rem;
+     }
+
+     @include tablet {
+          padding: 1.25rem 3rem 1.75rem 3rem;
+     }
+
+     @include laptop {
+          padding: 1rem 4rem;
+     }
+
+     &__nav {
+          display: flex;
+          width: 100%;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     &__logo-link {
+          width: 100%;
+          order: 1;
+
+          @include mini-tablet {
+               width: 35%;
+          }
+
+          @include laptop {
+               width: 8rem;
+          }
+     }
+
+     &__logo {
+          width: 100%;
+     }
+     
+     &__search {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 1rem 0;
+        order: 3;
+
+        @include mini-tablet {
+          order: 2;
+          width: 60%;
+        }
+
+        @include laptop {
+          width: 45%;
+        }
+
+        @include wide-desktop {
+          width: 50%;
+        }
+          
+          &-bar {
+               height: 2.5rem;
+               width: 100%;
+               border: none;
+               color: $secondary-text;
+               padding: 0 1rem;
+          }
+
+          &-icon {
+               width: 1.4rem;
+               height: 1.4rem;
+
+               &-container {
+                    background-color: $primary-highlight;
+                    width: 3rem;
+                    height: 2.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+               }
+          }
+     }
+
+     &__profile {
+          display: flex;
+          order: 2;
+          justify-content: space-between;
+          width: 100%;
+
+          &:hover {
+               cursor: pointer;
+          }
+
+          @include mini-tablet {
+               order: 3;
+               flex-direction: column;
+               width: auto;
+               flex-grow: .5;
+          }
+
+          @include laptop {
+               flex-grow: 0;
+          }
+     }
+
+     &__user {
+          font-size: .88rem;
+     }
+
+     &__login {
+          font-weight: 700;
+          font-size: .88rem;
+     }
+
+     &__returns-orders {
+          display: flex;
+          flex-direction: column;
+          order: 4;
+
+          &:hover {
+               cursor: pointer;
+          }
+     }
+
+     &__returns {
+          font-size: .88rem;
+     }
+
+     &__orders {
+          font-weight: 700;
+          font-size: .88rem;
+     }
+
+     &__everest-prime {
+          display: flex;
+          flex-direction: column;
+          order: 5;
+
+          &:hover {
+               cursor: pointer;
+          }
+     }
+
+     &__your {
+          font-size: .88rem;
+     }
+
+     &__prime {
+          font-weight: 700;
+          font-size: .88rem;
+     }
+
+     &__cart {
+          display: flex;
+          order: 6;
+          width: 3rem;
+          justify-content: space-between;
+          align-items: center;
+
+          &:hover {
+               cursor: pointer;
+          }
+
+          &-count {
+               font-weight: 700;
+               font-size: .88rem;
+          }
+     }
+
+     &__bag {
+          width: 1.4rem;
+          height: 1.4rem;
+          filter: brightness(0) invert(1);
+     }    
+}
