@@ -61,7 +61,7 @@ function Home() {
               <p className="home__category__learn-more">Learn More</p>
             </div>
             <div className="home__category">
-              <h4 className="home__category__heading">Computers & Accessories</h4>
+              <h4 className="home__category__heading">Computers</h4>
               <div className="home__category__image home__category__image__computers"></div>
               <p className="home__category__learn-more">Learn More</p>
             </div>
